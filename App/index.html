@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MMM-VideoPlayer - App</title>
+<script src="Assets/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+<link rel="stylesheet" type="text/css" href="Assets/styles.css">
+</head>
+<body>
+<div class="music-player">
+  <img src="Assets/background.jpg" class="album" />
+  <div class="dash">
+    <button id="mute" class="fa fa-volume-up"></button>
+    <span class="volume-level active">
+      <em style="width: 75%"></em>
+    </span>
+    <a id="love" href="#" rel="sidebar" title="bookmark this page" class="fa fa-heart"></a>
+    <div class="controls">
+		<button class="fa fa-folder-open" id="upload-btn"></button>
+		<button class="far fa-closed-captioning" id="subtitles"></button>
+		<button class="fa fa-play" id="play"></button>
+    </div>
+    <div class="info">
+      <i><span name="current">0:00</span> / <span name="duration">0:00</span></i>
+      <label id="fileName"></label>
+    </div>
+  </div>
+</div>
+  <input id="upload-input" type="file" name="upload">
+  <script src="Assets/jquery-3.3.1.min.js"></script>
+  <script src="Assets/socket.io.js"></script>	
+  <script src="Assets/upload.js"></script>	
+</body>
+</html>

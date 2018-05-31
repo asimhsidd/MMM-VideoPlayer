@@ -1,0 +1,14 @@
+{
+  "name": "MMM-VideoPlayer",
+  "version": "1.0.0",
+  "description": "A MagicMirror module for playing videos from any device on the network.",
+  "main": "MMM-VideoPlayer.js",
+  "author": "Asim Siddiqui",
+  "license": "MIT",
+  "dependencies": {
+	"express": "latest",
+	"Busboy": "latest",
+	"ip": "latest",
+	"srt2vtt": "latest"
+  }
+}

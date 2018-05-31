@@ -1,0 +1,243 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+body { background: #fff; background-size: cover }
+.music-player { position: absolute !important; top: 50%; left: 50%; margin: -207px 0 0 -207px }
+*:focus {
+    outline: 0;
+}
+.music-player
+{
+  position: relative;
+  width: 415px;
+  height: 415px;
+  overflow: hidden;
+  border-radius: 50%;
+  user-select: none;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,      /* inner white */
+        inset 20px 0 80px #f0f,   /* inner left magenta short */
+        inset -20px 0 80px #0ff,  /* inner right cyan short */
+        inset 20px 0 300px #f0f,  /* inner left magenta broad */
+        inset -20px 0 300px #0ff, /* inner right cyan broad */
+        0 0 50px #fff,            /* outer white */
+        -10px 0 80px #f0f,        /* outer left magenta */
+        10px 0 80px #0ff;         /* outer right cyan */
+}
+
+	#upload-input {
+  display: none;
+}
+
+	
+	.music-player > .album
+{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  min-height: 415px;
+}
+
+.music-player > .dash
+{
+  position: absolute;
+	top:30%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 300px;
+}
+
+.music-player > .dash > a, button
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: middle;
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+  border:none;
+  text-shadow: 0 1px 5px #000;
+  transition: all .3s;
+  opacity: .4;
+}
+
+.music-player > .dash > a[id="love"] { left: auto; right: 10px;}
+
+#mute { 		
+	border:none;
+	background:none;
+  	cursor: pointer;
+ }
+
+#mute:hover {
+	opacity:1;	
+}
+.music-player > .dash > a:hover { opacity: 1 }
+.music-player > .dash > button.fa-volume-off + .volume-level > em { display: none }
+
+.music-player > .dash > .volume-level
+{
+  position: absolute;
+  top: 57px;
+  left: 48px;
+  width: 320px;
+  height: 6px;
+  padding: 1px;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000, inset 0 1px 5px rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: all .3s;
+  opacity: .4;
+}
+
+.music-player > .dash > .volume-level > em
+{
+  display: block;
+  height: 6px;
+  max-width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 5px #000;
+  border-radius: 1.5px;
+}
+
+.music-player > .dash > .volume-level:hover { opacity: 1 }
+	
+.music-player > .dash > .controls
+{
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  width: 180px;
+  height: 55px;
+  margin: 0 0 0 -90px;
+  background: #fff;
+opacity:0.5;
+  border-radius: 23px;
+}
+
+.music-player > .dash > .controls:before
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 124px;
+  height: 88px;
+  margin: -44px 0 0 -62px;
+  background: #fff;
+  border-radius: 125%;
+}
+
+.music-player > .dash > .controls > button[id="play"]
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88px;
+  height: 58px;
+  line-height: 58px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+  color: #FFF;
+  margin: -29px 0 0 -44px;
+  background: #50C878;/*F5696C*/
+  border-radius: 29px;
+  transition: all .3s;
+		border:none;
+  cursor: pointer;
+opacity:1;
+}
+
+.music-player > .dash > .controls > button[id="play"]:hover
+{
+  background: #2e8b57;/*ED484B*/
+  box-shadow: 0 0 5px #3F704D;/*F5696C*/
+  text-shadow: 0 0 5px #FFF;
+}
+
+.music-player > .dash > .controls > button[id="upload-btn"], .music-player > .dash > .controls > button[id="subtitles"]
+{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 35px;
+  height: 30px;
+  margin: -15px 0 0;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: #BDBCBD;
+  background: #fa8072;/*F5696C*/
+  border-radius: 29px;
+  transition: all .3s;
+		border:none;
+  cursor: pointer;
+	opacity:1;
+}
+
+.music-player > .dash > .controls > button[id="subtitles"] { left: auto; right: 5px }
+
+.music-player > .dash > .controls > button[id="upload-btn"]:hover:enabled, .music-player > .dash > .controls > button[id="subtitles"]:hover
+{
+  background: #933A16;
+  box-shadow: 0 0 5px #4f97A3;
+  text-shadow: 0 0 5px #FFF;
+  color: #FFF;
+}	
+
+.music-player > .dash > .controls > button[id="upload-btn"]:disabled
+{
+  color: #FFF;
+	background:#666;
+}
+.music-player > .dash > .info
+{
+  position: absolute;
+	bottom: 40px;
+  left: 50%;
+  width: 180px;
+  margin: 0 0 0 -90px;
+  text-align: center;
+font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+  color: #FFF;
+  cursor: default;
+}
+
+.music-player > .dash > .info > i
+{
+  display: inline-block;
+  padding: 0 15px;
+  height: 20px;
+  line-height: 23px;
+  vertical-align: middle;
+	font-size: 16px;
+  font-style: normal;
+	font-weight:1000;
+	color:#201F22;
+  background: #fff;
+  border-radius: 10px;
+	opacity:0.6;
+}
+
+.music-player > .dash > .info > label
+{
+  font-family: 'Oswald', sans-serif;
+	display: block;
+  margin: 15px 0 20px;
+	font-weight:1000;
+  color:#201F22;
+}
+
